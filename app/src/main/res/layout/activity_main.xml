@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/progressBar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_red_light"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/trivia_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="48dp"
+        android:layout_marginTop="52dp"
+        android:fontFamily=""
+        android:text="@string/title_trivia"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:fontFamily="@font/autour_one"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/question_card"
+        android:layout_width="match_parent"
+        android:layout_height="175dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="104dp"
+        android:layout_marginRight="20dp"
+        app:cardCornerRadius="7dp"
+
+        app:cardElevation="15dp"
+        app:contentPadding="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/trivia_textView">
+
+        <TextView
+            android:id="@+id/question_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="this is question text "
+            android:textSize="18sp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/highest_score_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="104dp"
+        android:text="Highest score : 0 "
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:fontFamily="@font/aclonica"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/current_score_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="current"
+        android:textColor="@android:color/primary_text_dark"
+        android:textSize="18sp"
+        app:fontFamily="@font/aclonica"
+        app:layout_constraintStart_toStartOf="@+id/highest_score_textView"
+        app:layout_constraintTop_toBottomOf="@+id/highest_score_textView" />
+
+    <TextView
+        android:id="@+id/counter_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:padding="5dp"
+        android:text="99/100"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/trivia_textView" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="100dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/question_card"
+        app:layout_constraintStart_toStartOf="@+id/question_card"
+        app:layout_constraintTop_toBottomOf="@+id/question_card">
+
+        <ImageButton
+            android:id="@+id/prev_button"
+            android:layout_width="53dp"
+            android:layout_height="43dp"
+            android:layout_marginRight="25dp"
+            android:background="@android:color/holo_orange_dark"
+            android:tint="@android:color/primary_text_light"
+            app:srcCompat="@android:drawable/ic_media_previous" />
+
+        <Button
+            android:id="@+id/true_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/button_question"
+            android:text="True"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/false_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_question"
+            android:text="False"
+
+            android:textColor="@android:color/white" />
+
+        <ImageButton
+            android:id="@+id/next_button"
+            android:layout_width="53dp"
+            android:layout_height="46dp"
+            android:layout_marginLeft="25dp"
+            android:background="@android:color/holo_orange_dark"
+            android:tint="@android:color/primary_text_light"
+            app:srcCompat="@android:drawable/ic_media_next" />
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
